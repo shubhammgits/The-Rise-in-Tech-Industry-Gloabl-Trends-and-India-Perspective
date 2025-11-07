@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "@types/plotly.js": "^3.0.8",
-    "plotly.js": "^3.2.0",
-    "react-plotly.js": "^2.6.0",
-    "recharts": "^3.3.0"
-  }
-}
