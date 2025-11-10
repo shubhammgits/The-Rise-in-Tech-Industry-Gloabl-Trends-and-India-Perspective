@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import './layout.css'
-import { ThemeProvider } from 'next-themes'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import ScrollToTop from '@/components/ScrollToTop'
+import ThemeWrapper from '@/components/ThemeWrapper'
 import '@/styles/globals.css'
 
 export const metadata: Metadata = {
@@ -29,14 +29,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+        <ThemeWrapper>
           <Navbar />
           <main className="min-h-screen">
             {children}
           </main>
           <Footer />
           <ScrollToTop />
-        </ThemeProvider>
+        </ThemeWrapper>
       </body>
     </html>
   )
