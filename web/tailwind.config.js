@@ -7,25 +7,26 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'space': ['Space Grotesk', 'sans-serif'],
+        'space': ['Sora', 'sans-serif'],
         'display': ['Poppins', 'sans-serif'],
-        'body': ['Inter', 'sans-serif'],
+        'body': ['Sora', 'sans-serif'],
+        'mono': ['JetBrains Mono', 'monospace'],
       },
       colors: {
         slate: {
           50: '#f8fafc',
           900: '#0f172a',
         },
-        primary: '#3b82f6',
-        accent: '#60a5fa',
-        secondary: '#1e40af',
-        tertiary: '#0c4a6e',
+        primary: '#1e40af',
+        accent: '#1e40af',
+        secondary: '#0c4a6e',
+        tertiary: '#0a2342',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-hero': 'linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1e40af 100%)',
-        'gradient-card': 'linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(96, 165, 250, 0.05) 100%)',
-        'gradient-futuristic': 'linear-gradient(135deg, #3b82f6 0%, #1e40af 50%, #60a5fa 100%)',
+        'gradient-hero': 'linear-gradient(135deg, #0a0e27 0%, #0f172a 50%, #0c2d5e 100%)',
+        'gradient-card': 'linear-gradient(135deg, rgba(30, 64, 175, 0.1) 0%, rgba(12, 74, 110, 0.05) 100%)',
+        'gradient-futuristic': 'linear-gradient(135deg, #0f172a 0%, #0c2d5e 50%, #1e40af 100%)',
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
@@ -34,6 +35,8 @@ module.exports = {
         'rotate-3d': 'rotate3d 10s linear infinite',
         'float-y': 'floatY 4s ease-in-out infinite',
         'glow-pulse': 'glowPulse 2s ease-in-out infinite',
+        'slide-in-blur': 'slideInBlur 0.8s ease-out forwards',
+        'white-swish': 'whiteSwish 0.6s ease-in-out',
       },
       keyframes: {
         float: {
@@ -56,15 +59,15 @@ module.exports = {
           '100%': { transform: 'rotateX(0deg) rotateY(0deg)' },
         },
         glowPulse: {
-          '0%, 100%': { boxShadow: '0 0 20px rgba(59, 130, 246, 0.3), inset 0 0 20px rgba(59, 130, 246, 0.1)' },
-          '50%': { boxShadow: '0 0 40px rgba(59, 130, 246, 0.6), inset 0 0 30px rgba(59, 130, 246, 0.2)' },
+          '0%, 100%': { boxShadow: '0 0 20px rgba(30, 64, 175, 0.2), inset 0 0 20px rgba(30, 64, 175, 0.05)' },
+          '50%': { boxShadow: '0 0 40px rgba(30, 64, 175, 0.4), inset 0 0 30px rgba(30, 64, 175, 0.1)' },
         },
       },
       boxShadow: {
-        'glow': '0 0 20px rgba(59, 130, 246, 0.2)',
-        'glow-accent': '0 0 25px rgba(96, 165, 250, 0.15)',
-        'glow-secondary': '0 0 20px rgba(30, 58, 138, 0.15)',
-        'neon': '0 0 15px rgba(59, 130, 246, 0.3)',
+        'glow': '0 0 20px rgba(30, 64, 175, 0.15)',
+        'glow-accent': '0 0 25px rgba(30, 64, 175, 0.1)',
+        'glow-secondary': '0 0 20px rgba(12, 74, 110, 0.1)',
+        'neon': '0 0 15px rgba(30, 64, 175, 0.2)',
         '3d': '8px 8px 20px rgba(0, 0, 0, 0.15), -2px -2px 10px rgba(255, 255, 255, 0.1)',
       },
       perspective: {

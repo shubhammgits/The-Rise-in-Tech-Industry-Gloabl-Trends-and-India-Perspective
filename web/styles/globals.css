@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -38,7 +38,7 @@
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary via-secondary to-tertiary bg-clip-text text-transparent;
   }
 
   .section-container {
@@ -72,11 +72,11 @@
   }
 
   .section-title {
-    @apply text-5xl md:text-6xl font-bold mb-6 gradient-text font-display;
+    @apply text-5xl md:text-6xl lg:text-7xl font-bold mb-8 gradient-text font-display tracking-tight;
   }
 
   .section-subtitle {
-    @apply text-xl text-slate-300 max-w-3xl font-body;
+    @apply text-lg md:text-xl text-slate-300 max-w-3xl mx-auto font-sora leading-relaxed;
   }
 
   .card-3d {
@@ -99,7 +99,77 @@
   }
 }
 
-/* 3D perspective effects */
+/* Scroll reveal animations */
+@keyframes slideInBlur {
+  from {
+    opacity: 0;
+    transform: translateY(40px) translateX(-20px);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes whiteSwish {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%) skewX(-10deg);
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%) skewX(-10deg);
+  }
+}
+
+.scroll-reveal {
+  animation: slideInBlur 0.8s ease-out forwards;
+}
+
+.scroll-reveal-stagger:nth-child(1) { animation-delay: 0.1s; }
+.scroll-reveal-stagger:nth-child(2) { animation-delay: 0.2s; }
+.scroll-reveal-stagger:nth-child(3) { animation-delay: 0.3s; }
+.scroll-reveal-stagger:nth-child(4) { animation-delay: 0.4s; }
+
+.card-hover-swish {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-hover-swish::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.1) 25%, transparent 50%);
+  transform: skewX(-20deg);
+}
+
+.card-hover-swish:hover::before {
+  animation: whiteSwish 0.6s ease-in-out;
+}
+
+/* 3D perspective */
 .perspective {
   perspective: 1000px;
 }

@@ -53,7 +53,7 @@ export default function Home() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-6xl md:text-8xl font-bold mb-6 font-display">
-            <span className="gradient-text">Tech Innovation</span>
+            <span className="text-white">Tech Innovation</span>
             <br />
             <span className="text-white">Global Trends & India's Rise</span>
           </h1>
@@ -103,7 +103,7 @@ export default function Home() {
               {features.map((feature, i) => (
                 <motion.div key={i} variants={itemVariants}>
                   <GlassCard>
-                    <div className="inline-block p-3 rounded-lg bg-gradient-to-br from-primary/20 to-secondary/20 mb-4">
+                    <div className="inline-block p-3 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 mb-4">
                       <motion.div whileHover={{ rotate: 20, scale: 1.1 }}>
                         <feature.icon className="text-primary" size={32} />
                       </motion.div>

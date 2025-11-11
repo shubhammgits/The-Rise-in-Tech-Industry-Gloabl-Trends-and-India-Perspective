@@ -41,7 +41,7 @@ export default function Footer() {
                     href={link.href} 
                     className="text-slate-400 hover:text-primary transition-colors duration-300 font-space text-sm"
                   >
-                    → {link.label}
+                    {link.label}
                   </Link>
                 </li>
               ))}

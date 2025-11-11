@@ -49,7 +49,7 @@ export default function About() {
   }
 
   return (
-    <div className="pt-24 pb-20 min-h-screen bg-white">
+    <div className="pt-24 pb-20 min-h-screen">
       {/* Hero */}
       <section className="section-container py-20">
         <motion.div
@@ -58,10 +58,10 @@ export default function About() {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <h1 className="section-title text-secondary">
+          <h1 className="section-title">
             About This Project
           </h1>
-          <p className="section-subtitle text-slate-600 mx-auto">
+          <p className="section-subtitle mx-auto">
             A data-driven exploration of the technology industry's rise, with India at the forefront of this transformation. This project combines rigorous data analysis with machine learning to uncover insights about valuations, funding patterns, and ICT infrastructure development.
           </p>
         </motion.div>
@@ -80,14 +80,14 @@ export default function About() {
               <GlassCard>
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 10 }}
-                  className="inline-block p-3 rounded-lg bg-primary/10 mb-4"
+                  className="inline-block p-3 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 mb-4"
                 >
                   <section.icon className="text-primary" size={32} />
                 </motion.div>
-                <h3 className="text-2xl font-bold mb-3 text-secondary font-display">
+                <h3 className="text-2xl font-bold mb-3 gradient-text font-display">
                   {section.title}
                 </h3>
-                <p className="text-slate-600 leading-relaxed font-body">
+                <p className="text-slate-300 leading-relaxed font-body">
                   {section.description}
                 </p>
               </GlassCard>
@@ -104,7 +104,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl font-bold mb-8 text-secondary font-display text-center md:text-left">
+            <h2 className="text-4xl font-bold mb-8 gradient-text font-display text-center md:text-left">
               The Problem We Address
             </h2>
             <ul className="space-y-4">
@@ -120,7 +120,7 @@ export default function About() {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.1 }}
-                  className="flex items-start gap-3 text-slate-600 font-body hover:text-primary transition-colors"
+                  className="flex items-start gap-3 text-slate-300 font-body hover:text-primary transition-colors"
                 >
                   <span className="text-primary font-bold text-lg flex-shrink-0 mt-0.5">→</span>
                   <span>{item}</span>
@@ -133,12 +133,12 @@ export default function About() {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="glass-card p-8 rounded-2xl border border-slate-200"
+            className="glass-card p-8 rounded-2xl border border-white/10"
           >
-            <h3 className="text-2xl font-bold mb-6 text-secondary font-display">
+            <h3 className="text-2xl font-bold mb-6 gradient-text font-display">
               Our Solution
             </h3>
-            <ul className="space-y-4 text-slate-600 font-body">
+            <ul className="space-y-4 text-slate-300 font-body">
               {[
                 '📊 Comprehensive data analysis of 1000+ global tech companies',
                 '🇮🇳 Deep dive into Indian startup funding dynamics',

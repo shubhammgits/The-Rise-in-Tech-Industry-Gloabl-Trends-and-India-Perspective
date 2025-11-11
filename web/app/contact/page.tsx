@@ -50,19 +50,18 @@ export default function Contact() {
   }
 
   return (
-    <div className="pt-24 pb-20">
+    <div className="pt-24 pb-20 min-h-screen">
       {/* Hero */}
-      <section className="section-container py-16">
+      <section className="section-container py-16 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center"
         >
           <h1 className="text-5xl md:text-6xl font-bold mb-6 gradient-text">
             Connect With Me
           </h1>
-          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
             Questions, feedback, or collaboration opportunities? Reach out through any of these channels.
           </p>
         </motion.div>

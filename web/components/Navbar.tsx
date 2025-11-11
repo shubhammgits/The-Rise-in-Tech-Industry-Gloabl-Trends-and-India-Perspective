@@ -24,17 +24,19 @@ export default function Navbar() {
   ]
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
-      <div className="section-container">
+    <nav className="fixed top-0 w-full z-50 backdrop-blur-xl border-b border-white/10">
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 to-slate-950/40 pointer-events-none" />
+      
+      <div className="section-container relative">
         <div className="flex items-center justify-between h-20">
-          {/* Logo/Brand */}
+          {/* Logo/Brand - REMOVED */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             className="flex items-center gap-2"
           >
-            <span className="text-2xl font-bold text-secondary font-display">Rise in Tech</span>
+            {/* Empty space for balance */}
           </motion.div>
 
           {/* Desktop Menu */}
@@ -48,7 +50,7 @@ export default function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="px-4 py-2 text-slate-600 font-space font-medium text-sm hover:text-primary transition-colors duration-300"
+                className="px-4 py-2 text-slate-300 font-space font-medium text-sm hover:text-primary transition-colors duration-300 hover:bg-white/5 rounded-lg"
               >
                 {item.label}
               </Link>
@@ -59,21 +61,23 @@ export default function Navbar() {
           <div className="flex items-center gap-4">
             {/* Theme Toggle */}
             {mounted && (
-              <button
+              <motion.button
+                whileHover={{ scale: 1.1, rotate: 20 }}
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                className="p-2 rounded-lg hover:bg-slate-100 transition-colors duration-300 text-slate-600 hover:text-primary"
+                className="p-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-primary/50 transition-all duration-300 text-slate-300 hover:text-primary"
               >
                 {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-              </button>
+              </motion.button>
             )}
 
             {/* Mobile Menu Button */}
-            <button
+            <motion.button
+              whileHover={{ scale: 1.1 }}
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors duration-300 text-slate-600"
+              className="lg:hidden p-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-300 text-slate-300 hover:text-primary"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+            </motion.button>
           </div>
         </div>
 
@@ -90,7 +94,7 @@ export default function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="block px-4 py-3 rounded-lg bg-slate-50 hover:bg-slate-100 text-slate-600 hover:text-primary font-space font-medium transition-colors duration-300"
+                className="block px-4 py-3 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-primary/50 transition-all duration-300 text-slate-300 hover:text-primary font-space font-medium"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}

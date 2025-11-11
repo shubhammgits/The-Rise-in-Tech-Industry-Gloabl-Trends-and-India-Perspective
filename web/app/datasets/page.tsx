@@ -86,9 +86,9 @@ export default function Datasets() {
   }
 
   return (
-    <div className="pt-24 pb-20">
+    <div className="pt-24 pb-20 min-h-screen">
       {/* Hero */}
-      <section className="section-container py-16">
+      <section className="section-container py-16 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -97,53 +97,55 @@ export default function Datasets() {
           <h1 className="text-5xl md:text-6xl font-bold mb-6 gradient-text">
             Dataset Overview
           </h1>
-          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl">
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             Explore the three comprehensive datasets that power our analysis of the global and Indian tech industries.
           </p>
         </motion.div>
       </section>
 
       {/* Datasets Cards */}
-      <section className="section-container py-20">
+      <section className="w-full py-20 px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          className="space-y-8"
+          viewport={{ once: true, margin: '-100px' }}
+          className="max-w-5xl mx-auto space-y-8"
         >
           {datasets.map((dataset, i) => (
             <motion.div
               key={i}
               variants={itemVariants}
-              whileHover={{ y: -8 }}
+              whileHover={{ y: -8, scale: 1.02 }}
+              className="card-hover-swish"
             >
               <GlassCard className="p-8">
                 {/* Header */}
-                <div className="flex items-start gap-4 mb-6">
-                  <Database className="text-indigo-600 dark:text-indigo-400 flex-shrink-0" size={32} />
-                  <div>
-                    <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">
-                      {dataset.name}
-                    </h2>
-                    <p className="text-slate-600 dark:text-slate-300">
-                      {dataset.description}
-                    </p>
+                <div className="text-center mb-6">
+                  <div className="flex justify-center mb-4">
+                    <Database className="text-primary" size={40} />
                   </div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+                    {dataset.name}
+                  </h2>
+                  <p className="text-slate-300 text-center">
+                    {dataset.description}
+                  </p>
                 </div>
 
                 {/* Stats */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6 pb-6 border-b border-slate-200 dark:border-slate-700">
-                  <div>
-                    <p className="text-sm font-medium text-slate-600 dark:text-slate-400">Rows</p>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6 pb-6 border-b border-white/10">
+                  <div className="text-center">
+                    <p className="text-sm font-medium text-slate-400">Rows</p>
                     <p className="text-2xl font-bold gradient-text">{dataset.rows}</p>
                   </div>
-                  <div>
-                    <p className="text-sm font-medium text-slate-600 dark:text-slate-400">Columns</p>
+                  <div className="text-center">
+                    <p className="text-sm font-medium text-slate-400">Columns</p>
                     <p className="text-2xl font-bold gradient-text">{dataset.columns}</p>
                   </div>
-                  <div className="col-span-2">
-                    <p className="text-sm font-medium text-slate-600 dark:text-slate-400 mb-1">Insights</p>
-                    <p className="text-sm text-slate-600 dark:text-slate-400">{dataset.insights}</p>
+                  <div className="col-span-2 text-center">
+                    <p className="text-sm font-medium text-slate-400 mb-1">Insights</p>
+                    <p className="text-sm text-slate-400">{dataset.insights}</p>
                   </div>
                 </div>
 

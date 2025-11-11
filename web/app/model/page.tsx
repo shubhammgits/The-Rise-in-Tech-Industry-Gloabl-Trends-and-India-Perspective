@@ -33,9 +33,9 @@ export default function Model() {
   }
 
   return (
-    <div className="pt-24 pb-20">
+    <div className="pt-24 pb-20 min-h-screen">
       {/* Hero */}
-      <section className="section-container py-16">
+      <section className="section-container py-16 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -44,7 +44,7 @@ export default function Model() {
           <h1 className="text-5xl md:text-6xl font-bold mb-6 gradient-text">
             ML Model & Forecasting
           </h1>
-          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl">
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             Predictive modeling using Linear Regression to forecast startup funding trends with high accuracy.
           </p>
         </motion.div>
@@ -73,7 +73,7 @@ export default function Model() {
             transition={{ duration: 0.8 }}
           >
             <GlassCard>
-              <h2 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">
+              <h2 className="text-2xl font-bold mb-4 text-white">
                 Model Specification
               </h2>
               <div className="space-y-4">

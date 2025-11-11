@@ -99,9 +99,9 @@ export default function Conclusion() {
   }
 
   return (
-    <div className="pt-24 pb-20">
+    <div className="pt-24 pb-20 min-h-screen">
       {/* Hero */}
-      <section className="section-container py-16">
+      <section className="section-container py-16 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -110,7 +110,7 @@ export default function Conclusion() {
           <h1 className="text-5xl md:text-6xl font-bold mb-6 gradient-text">
             Conclusion & Findings
           </h1>
-          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl">
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             Synthesizing insights from comprehensive data analysis to understand the global tech landscape and India's transformative role.
           </p>
         </motion.div>
@@ -127,7 +127,7 @@ export default function Conclusion() {
           {conclusions.map((conclusion, i) => (
             <motion.div key={i} variants={itemVariants}>
               <GlassCard>
-                <conclusion.icon className="text-indigo-600 dark:text-indigo-400 mb-4" size={32} />
+                <conclusion.icon className="text-primary mb-4" size={32} />
                 <h3 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">
                   {conclusion.title}
                 </h3>
