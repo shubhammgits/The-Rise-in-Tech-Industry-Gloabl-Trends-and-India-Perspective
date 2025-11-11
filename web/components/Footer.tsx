@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Github, Linkedin, Mail, Heart } from 'lucide-react'
+import { Github, Linkedin, Mail } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 export default function Footer() {
@@ -13,40 +13,48 @@ export default function Footer() {
     { icon: Mail, href: 'mailto:shubhamm18.work@gmail.com', label: 'Email' },
   ]
 
-  return (
-    <footer className="border-t glass-card bg-white/50 dark:bg-slate-900/50">
-      <div className="section-container py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          {/* Brand */}
-          <div>
-            <h3 className="text-2xl font-bold gradient-text mb-2">TechRise</h3>
-            <p className="text-sm text-slate-600 dark:text-slate-400">
-              Analyzing the rise of technology industry through data-driven insights.
-            </p>
-          </div>
+  const quickLinks = [
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/about' },
+    { label: 'Datasets', href: '/datasets' },
+    { label: 'Visuals', href: '/visuals' },
+    { label: 'Model', href: '/model' },
+    { label: 'Conclusion', href: '/conclusion' },
+  ]
 
+  return (
+    <footer className="border-t border-white/10 bg-gradient-to-b from-transparent to-slate-950/40 backdrop-blur-md">
+      <div className="section-container py-16">
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
           {/* Quick Links */}
-          <div>
-            <h4 className="font-semibold mb-4 text-slate-900 dark:text-white">Quick Links</h4>
-            <ul className="space-y-2 text-sm">
-              {[
-                { label: 'Home', href: '/' },
-                { label: 'Datasets', href: '/datasets' },
-                { label: 'Visuals', href: '/visuals' },
-                { label: 'Model', href: '/model' },
-              ].map((link) => (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <h4 className="text-lg font-bold gradient-text font-display mb-6">Quick Links</h4>
+            <ul className="grid grid-cols-2 gap-3">
+              {quickLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
-                    {link.label}
+                  <Link 
+                    href={link.href} 
+                    className="text-slate-400 hover:text-primary transition-colors duration-300 font-space text-sm"
+                  >
+                    → {link.label}
                   </Link>
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
-          {/* Social Links */}
-          <div>
-            <h4 className="font-semibold mb-4 text-slate-900 dark:text-white">Connect</h4>
+          {/* Connect Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            <h4 className="text-lg font-bold gradient-text font-display mb-6">Connect</h4>
             <div className="flex gap-4">
               {socialLinks.map(({ icon: Icon, href, label }) => (
                 <motion.a
@@ -54,28 +62,33 @@ export default function Footer() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  whileHover={{ scale: 1.2, rotate: 10 }}
-                  className="p-3 glass-card rounded-lg hover:shadow-glow transition-all duration-300"
+                  whileHover={{ scale: 1.15, rotate: 10 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="relative p-3 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 border border-white/10 hover:border-primary/50 transition-all duration-300 text-primary hover:shadow-glow group"
                   title={label}
                 >
-                  <Icon size={20} />
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-lg opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+                  <Icon size={20} className="relative" />
                 </motion.a>
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
 
+        {/* Divider */}
+        <div className="border-t border-white/10" />
+
         {/* Bottom Bar */}
-        <div className="border-t border-slate-200 dark:border-slate-700 pt-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-slate-600 dark:text-slate-400 flex items-center gap-1">
-              Made with <Heart size={16} className="text-red-500" /> by Shubham
-            </p>
-            <p className="text-sm text-slate-600 dark:text-slate-400">
-              © {currentYear} The Rise in Tech Industry. All rights reserved.
-            </p>
-          </div>
-        </div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="pt-8 text-center"
+        >
+          <p className="text-sm text-slate-500 font-space">
+            © {currentYear} Data-Driven Analysis. Building the future with insights.
+          </p>
+        </motion.div>
       </div>
     </footer>
   )

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,17 +10,35 @@
   }
 
   body {
-    @apply bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-colors duration-300;
+    @apply bg-gradient-to-br from-slate-900 via-slate-950 to-black text-white transition-colors duration-300 font-body;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+
+  ::selection {
+    @apply bg-primary/50 text-white;
   }
 }
 
 @layer components {
   .glass-card {
-    @apply bg-white/10 backdrop-blur-lg border border-white/20 dark:bg-slate-800/20 dark:border-slate-700/30 rounded-xl;
+    @apply relative bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-xl border border-white/10 dark:border-white/10 rounded-2xl overflow-hidden;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  }
+
+  .glass-card::before {
+    @apply absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-2xl;
+    content: '';
+  }
+
+  .glass-card-3d {
+    @apply glass-card transform transition-transform duration-500 hover:-translate-y-2 hover:shadow-3d;
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent;
   }
 
   .section-container {
@@ -26,15 +46,42 @@
   }
 
   .btn-primary {
-    @apply px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-medium transition-all duration-300 hover:shadow-glow;
+    @apply relative px-6 py-3 bg-gradient-to-r from-primary to-secondary text-slate-900 font-semibold rounded-xl font-space transition-all duration-300 hover:shadow-neon hover:scale-105 overflow-hidden;
+  }
+
+  .btn-primary::before {
+    @apply absolute inset-0 bg-white/20 opacity-0 hover:opacity-100 transition-opacity duration-300;
+    content: '';
   }
 
   .btn-secondary {
-    @apply px-6 py-3 bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 text-slate-900 dark:text-white rounded-lg font-medium transition-all duration-300;
+    @apply px-6 py-3 bg-white/10 border border-white/20 hover:bg-white/20 text-white rounded-xl font-medium transition-all duration-300 font-space;
   }
 
   .metric-card {
-    @apply glass-card p-6 rounded-lg hover:shadow-glow transition-all duration-300 transform hover:scale-105;
+    @apply glass-card p-8 rounded-2xl hover:shadow-glow transition-all duration-300 transform hover:scale-105 hover:-translate-y-3;
+  }
+
+  .nav-item {
+    @apply relative px-4 py-2 rounded-lg font-space font-medium transition-all duration-300 hover:text-primary;
+  }
+
+  .nav-item::after {
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full;
+    content: '';
+  }
+
+  .section-title {
+    @apply text-5xl md:text-6xl font-bold mb-6 gradient-text font-display;
+  }
+
+  .section-subtitle {
+    @apply text-xl text-slate-300 max-w-3xl font-body;
+  }
+
+  .card-3d {
+    @apply relative transform-gpu transition-all duration-500;
+    perspective: 1000px;
   }
 }
 
@@ -50,4 +97,9 @@
   to {
     opacity: 1;
   }
+}
+
+/* 3D perspective effects */
+.perspective {
+  perspective: 1000px;
 }

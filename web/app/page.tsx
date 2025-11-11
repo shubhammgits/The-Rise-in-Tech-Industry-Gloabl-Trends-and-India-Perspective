@@ -52,92 +52,99 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
-            The Rise in{' '}
-            <span className="gradient-text">Tech Industry</span>
+          <h1 className="text-6xl md:text-8xl font-bold mb-6 font-display">
+            <span className="gradient-text">Tech Innovation</span>
+            <br />
+            <span className="text-white">Global Trends & India's Rise</span>
           </h1>
-          <p className="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-            Exploring global trends and India's transformative role in the technology sector through comprehensive data analysis and machine learning insights.
+          <p className="text-lg md:text-xl text-slate-300 mb-12 max-w-3xl mx-auto font-body">
+            Exploring the technology industry's transformation with comprehensive data analysis, machine learning forecasting, and insights into India's emerging tech ecosystem.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/visuals" className="btn-primary">
-              View Analysis
-            </Link>
-            <a
-              href="https://github.com/shubhammgits/The-Rise-in-Tech-Industry-Gloabl-Trends-and-India-Perspective"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-secondary"
-            >
-              Download Notebook
-            </a>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Link href="/visuals" className="btn-primary inline-block">
+                Explore Analysis
+              </Link>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <a
+                href="https://github.com/shubhammgits/The-Rise-in-Tech-Industry-Gloabl-Trends-and-India-Perspective"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary inline-block"
+              >
+                View on GitHub
+              </a>
+            </motion.div>
           </div>
         </motion.div>
       </AnimatedHero>
 
       {/* Features Section */}
-      <section className="py-20 bg-slate-50 dark:bg-slate-900/50">
+      <section className="py-20 bg-gradient-to-b from-slate-950 to-slate-900">
         <div className="section-container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold mb-4 text-slate-900 dark:text-white">
-              Project Highlights
-            </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-300">
-              A comprehensive study combining data science, visualization, and machine learning
-            </p>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-4 gradient-text font-display">
+                Project Highlights
+              </h2>
+              <p className="text-lg text-slate-300 font-body">
+                A comprehensive study combining data science, visualization, and machine learning
+              </p>
+            </div>
           </motion.div>
 
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
-          >
-            {features.map((feature, i) => (
-              <motion.div
-                key={i}
-                variants={itemVariants}
-              >
-                <GlassCard>
-                  <feature.icon className="text-indigo-600 dark:text-indigo-400 mb-4" size={32} />
-                  <h3 className="text-xl font-bold mb-2 text-slate-900 dark:text-white">
-                    {feature.title}
-                  </h3>
-                  <p className="text-slate-600 dark:text-slate-400">
-                    {feature.description}
-                  </p>
-                </GlassCard>
-              </motion.div>
-            ))}
+          <motion.div variants={containerVariants} initial="hidden" whileInView="visible">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, i) => (
+                <motion.div key={i} variants={itemVariants}>
+                  <GlassCard>
+                    <div className="inline-block p-3 rounded-lg bg-gradient-to-br from-primary/20 to-secondary/20 mb-4">
+                      <motion.div whileHover={{ rotate: 20, scale: 1.1 }}>
+                        <feature.icon className="text-primary" size={32} />
+                      </motion.div>
+                    </div>
+                    <h3 className="text-xl font-bold mb-2 gradient-text font-display">
+                      {feature.title}
+                    </h3>
+                    <p className="text-slate-300 font-body">
+                      {feature.description}
+                    </p>
+                  </GlassCard>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-hero opacity-20" />
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 opacity-40" />
         <div className="section-container relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="glass-card p-12 rounded-2xl text-center"
-          >
-            <h2 className="text-4xl font-bold mb-4 text-slate-900 dark:text-white">
-              Ready to Explore the Data?
-            </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-300 mb-8">
-              Dive into our interactive visualizations and machine learning insights
-            </p>
-            <Link href="/datasets" className="btn-primary">
-              Get Started
-            </Link>
-          </motion.div>
+          <div className="glass-card p-12 rounded-2xl text-center border border-white/10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-4xl font-bold mb-4 gradient-text font-display">
+                Ready to Explore the Data?
+              </h2>
+              <p className="text-lg text-slate-300 mb-8 font-body">
+                Dive into our interactive visualizations and machine learning insights
+              </p>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Link href="/datasets" className="btn-primary inline-block">
+                  Get Started
+                </Link>
+              </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
     </>

@@ -49,18 +49,19 @@ export default function About() {
   }
 
   return (
-    <div className="pt-24 pb-20">
+    <div className="pt-24 pb-20 min-h-screen bg-white">
       {/* Hero */}
-      <section className="section-container py-16">
+      <section className="section-container py-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+          className="text-center"
         >
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 gradient-text">
+          <h1 className="section-title text-secondary">
             About This Project
           </h1>
-          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl">
+          <p className="section-subtitle text-slate-600 mx-auto">
             A data-driven exploration of the technology industry's rise, with India at the forefront of this transformation. This project combines rigorous data analysis with machine learning to uncover insights about valuations, funding patterns, and ICT infrastructure development.
           </p>
         </motion.div>
@@ -77,11 +78,16 @@ export default function About() {
           {sections.map((section, i) => (
             <motion.div key={i} variants={itemVariants}>
               <GlassCard>
-                <section.icon className="text-indigo-600 dark:text-indigo-400 mb-4" size={32} />
-                <h3 className="text-2xl font-bold mb-3 text-slate-900 dark:text-white">
+                <motion.div
+                  whileHover={{ scale: 1.1, rotate: 10 }}
+                  className="inline-block p-3 rounded-lg bg-primary/10 mb-4"
+                >
+                  <section.icon className="text-primary" size={32} />
+                </motion.div>
+                <h3 className="text-2xl font-bold mb-3 text-secondary font-display">
                   {section.title}
                 </h3>
-                <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                <p className="text-slate-600 leading-relaxed font-body">
                   {section.description}
                 </p>
               </GlassCard>
@@ -92,13 +98,13 @@ export default function About() {
 
       {/* Problem & Solution */}
       <section className="section-container py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl font-bold mb-6 text-slate-900 dark:text-white">
+            <h2 className="text-4xl font-bold mb-8 text-secondary font-display text-center md:text-left">
               The Problem We Address
             </h2>
             <ul className="space-y-4">
@@ -109,10 +115,16 @@ export default function About() {
                 'Correlating ICT infrastructure with economic outcomes',
                 'Forecasting future investment trends',
               ].map((item, i) => (
-                <li key={i} className="flex items-start gap-3 text-slate-600 dark:text-slate-300">
-                  <span className="text-indigo-500 mt-1">✓</span>
+                <motion.li 
+                  key={i} 
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.1 }}
+                  className="flex items-start gap-3 text-slate-600 font-body hover:text-primary transition-colors"
+                >
+                  <span className="text-primary font-bold text-lg flex-shrink-0 mt-0.5">→</span>
                   <span>{item}</span>
-                </li>
+                </motion.li>
               ))}
             </ul>
           </motion.div>
@@ -121,12 +133,12 @@ export default function About() {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="glass-card p-8 rounded-xl"
+            className="glass-card p-8 rounded-2xl border border-slate-200"
           >
-            <h3 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">
+            <h3 className="text-2xl font-bold mb-6 text-secondary font-display">
               Our Solution
             </h3>
-            <ul className="space-y-3 text-slate-600 dark:text-slate-400">
+            <ul className="space-y-4 text-slate-600 font-body">
               {[
                 '📊 Comprehensive data analysis of 1000+ global tech companies',
                 '🇮🇳 Deep dive into Indian startup funding dynamics',
@@ -135,7 +147,15 @@ export default function About() {
                 '🔗 Correlation analysis between infrastructure and growth',
                 '💡 Actionable insights for stakeholders',
               ].map((item, i) => (
-                <li key={i}>{item}</li>
+                <motion.li 
+                  key={i}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.1 }}
+                  className="hover:text-primary transition-colors"
+                >
+                  {item}
+                </motion.li>
               ))}
             </ul>
           </motion.div>
