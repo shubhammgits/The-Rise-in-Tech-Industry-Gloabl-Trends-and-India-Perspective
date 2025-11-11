@@ -35,13 +35,14 @@ export default function Model() {
   return (
     <div className="pt-24 pb-20 min-h-screen">
       {/* Hero */}
-      <section className="section-container py-16 text-center">
+      <section className="w-full py-16 px-4 sm:px-6 lg:px-8">
         <motion.div
+          className="max-w-5xl mx-auto text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 gradient-text">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
             ML Model & Forecasting
           </h1>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
@@ -51,26 +52,28 @@ export default function Model() {
       </section>
 
       {/* Model Overview */}
-      <section className="section-container py-20">
+      <section className="w-full py-20 px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16"
+          viewport={{ once: true, margin: '-100px' }}
+          className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6 mb-16"
         >
           {metrics.map((metric, i) => (
-            <motion.div key={i} variants={itemVariants}>
+            <motion.div key={i} variants={itemVariants} className="card-hover-swish">
               <MetricCard {...metric} />
             </motion.div>
           ))}
         </motion.div>
 
         {/* Model Details */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -30, filter: 'blur(10px)' }}
+            whileInView={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true, margin: '-100px' }}
           >
             <GlassCard>
               <h2 className="text-2xl font-bold mb-4 text-white">
@@ -103,9 +106,10 @@ export default function Model() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 30, filter: 'blur(10px)' }}
+            whileInView={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true, margin: '-100px' }}
           >
             <GlassCard>
               <h2 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">
@@ -134,13 +138,15 @@ export default function Model() {
       </section>
 
       {/* Forecast Graph Section */}
-      <section className="section-container py-20">
+      <section className="w-full py-20 px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 40, filter: 'blur(10px)' }}
+          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
           transition={{ duration: 0.8 }}
+          viewport={{ once: true, margin: '-100px' }}
+          className="max-w-5xl mx-auto"
         >
-          <h2 className="text-4xl font-bold mb-8 text-slate-900 dark:text-white">
+          <h2 className="text-4xl font-bold mb-8 text-white">
             Actual vs Predicted vs Forecast
           </h2>
           <GlassCard>
@@ -158,13 +164,15 @@ export default function Model() {
       </section>
 
       {/* Model Insights */}
-      <section className="section-container py-20 bg-slate-50 dark:bg-slate-900/50 -mx-4 px-4 md:px-8 lg:px-0">
+      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/30">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 40, filter: 'blur(10px)' }}
+          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
           transition={{ duration: 0.8 }}
+          viewport={{ once: true, margin: '-100px' }}
+          className="max-w-5xl mx-auto"
         >
-          <h2 className="text-4xl font-bold mb-12 text-center text-slate-900 dark:text-white">
+          <h2 className="text-4xl font-bold mb-12 text-center text-white">
             Model Insights & Findings
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

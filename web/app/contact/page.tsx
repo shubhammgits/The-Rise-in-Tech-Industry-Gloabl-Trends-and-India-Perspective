@@ -68,25 +68,28 @@ export default function Contact() {
       </section>
 
       {/* Contact Cards */}
-      <section className="section-container py-20">
+      <section className="w-full py-20 px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          viewport={{ once: true, margin: '-100px' }}
+          className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8"
         >
           {contacts.map((contact, i) => (
-            <motion.div key={i} variants={itemVariants}>
+            <motion.div key={i} variants={itemVariants} className="card-hover-swish">
               <a href={contact.link} target="_blank" rel="noopener noreferrer">
                 <motion.div
-                  whileHover={{ y: -8 }}
-                  className="glass-card p-8 rounded-xl h-full cursor-pointer hover:shadow-glow transition-all duration-300"
+                  whileHover={{ y: -8, scale: 1.05 }}
+                  className="glass-card p-8 rounded-xl h-full cursor-pointer hover:shadow-glow transition-all duration-300 text-center"
                 >
-                  <contact.icon className="text-indigo-600 dark:text-indigo-400 mb-4" size={40} />
-                  <h3 className="text-2xl font-bold mb-2 text-slate-900 dark:text-white">
+                  <div className="flex justify-center mb-4">
+                    <contact.icon className="text-primary" size={40} />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2 text-white">
                     {contact.title}
                   </h3>
-                  <p className="text-slate-600 dark:text-slate-300 mb-4">
+                  <p className="text-slate-300 mb-4">
                     {contact.description}
                   </p>
                   <div className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-medium group">

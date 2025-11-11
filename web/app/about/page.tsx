@@ -68,12 +68,13 @@ export default function About() {
       </section>
 
       {/* Sections */}
-      <section className="section-container py-20">
+      <section className="w-full py-20 px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          viewport={{ once: true, margin: '-100px' }}
+          className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8"
         >
           {sections.map((section, i) => (
             <motion.div key={i} variants={itemVariants}>
@@ -97,14 +98,16 @@ export default function About() {
       </section>
 
       {/* Problem & Solution */}
-      <section className="section-container py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+      <section className="w-full py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+            className="text-center md:text-left"
           >
-            <h2 className="text-4xl font-bold mb-8 gradient-text font-display text-center md:text-left">
+            <h2 className="text-4xl font-bold mb-8 gradient-text font-display">
               The Problem We Address
             </h2>
             <ul className="space-y-4">

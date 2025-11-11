@@ -81,15 +81,16 @@ export default function Home() {
       </AnimatedHero>
 
       {/* Features Section */}
-      <section className="py-20 bg-gradient-to-b from-slate-950 to-slate-900">
-        <div className="section-container">
+      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-950 to-slate-900">
+        <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true, margin: '-100px' }}
           >
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4 gradient-text font-display">
+              <h2 className="text-4xl font-bold mb-4 text-white font-display">
                 Project Highlights
               </h2>
               <p className="text-lg text-slate-300 font-body">
@@ -98,17 +99,22 @@ export default function Home() {
             </div>
           </motion.div>
 
-          <motion.div variants={containerVariants} initial="hidden" whileInView="visible">
+          <motion.div 
+            variants={containerVariants} 
+            initial="hidden" 
+            whileInView="visible"
+            viewport={{ once: true, margin: '-100px' }}
+          >
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {features.map((feature, i) => (
-                <motion.div key={i} variants={itemVariants}>
+                <motion.div key={i} variants={itemVariants} className="card-hover-swish">
                   <GlassCard>
                     <div className="inline-block p-3 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 mb-4">
                       <motion.div whileHover={{ rotate: 20, scale: 1.1 }}>
                         <feature.icon className="text-primary" size={32} />
                       </motion.div>
                     </div>
-                    <h3 className="text-xl font-bold mb-2 gradient-text font-display">
+                    <h3 className="text-xl font-bold mb-2 text-white font-display">
                       {feature.title}
                     </h3>
                     <p className="text-slate-300 font-body">
@@ -123,16 +129,17 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 relative overflow-hidden">
+      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 opacity-40" />
-        <div className="section-container relative z-10">
+        <div className="max-w-5xl mx-auto relative z-10">
           <div className="glass-card p-12 rounded-2xl text-center border border-white/10">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 40, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
               transition={{ duration: 0.8 }}
+              viewport={{ once: true, margin: '-100px' }}
             >
-              <h2 className="text-4xl font-bold mb-4 gradient-text font-display">
+              <h2 className="text-4xl font-bold mb-4 text-white font-display">
                 Ready to Explore the Data?
               </h2>
               <p className="text-lg text-slate-300 mb-8 font-body">

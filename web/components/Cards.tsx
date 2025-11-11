@@ -76,7 +76,7 @@ export function MetricCard({ value, label, icon: Icon }: { value: string; label:
       }}
     >
       {/* Gradient Border Animation */}
-      <div className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-tertiary opacity-0 hover:opacity-10 transition-opacity duration-500 rounded-2xl" />
+      <div className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-tertiary opacity-0 hover:opacity-10 transition-opacity duration-500 rounded-2xl pointer-events-none" />
       
       <div className="relative z-10">
         <div className="flex items-center gap-3 mb-4">

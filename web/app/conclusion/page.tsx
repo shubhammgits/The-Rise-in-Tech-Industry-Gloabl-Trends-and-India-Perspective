@@ -101,13 +101,14 @@ export default function Conclusion() {
   return (
     <div className="pt-24 pb-20 min-h-screen">
       {/* Hero */}
-      <section className="section-container py-16 text-center">
+      <section className="w-full py-16 px-4 sm:px-6 lg:px-8">
         <motion.div
+          className="max-w-5xl mx-auto text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 gradient-text">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
             Conclusion & Findings
           </h1>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
@@ -117,24 +118,25 @@ export default function Conclusion() {
       </section>
 
       {/* Key Conclusions */}
-      <section className="section-container py-20">
+      <section className="w-full py-20 px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          viewport={{ once: true, margin: '-100px' }}
+          className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8"
         >
           {conclusions.map((conclusion, i) => (
-            <motion.div key={i} variants={itemVariants}>
+            <motion.div key={i} variants={itemVariants} className="card-hover-swish">
               <GlassCard>
                 <conclusion.icon className="text-primary mb-4" size={32} />
-                <h3 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">
+                <h3 className="text-2xl font-bold mb-4 text-white">
                   {conclusion.title}
                 </h3>
                 <ul className="space-y-3">
                   {conclusion.points.map((point, j) => (
-                    <li key={j} className="flex items-start gap-2 text-slate-600 dark:text-slate-300">
-                      <span className="text-indigo-500 mt-1">→</span>
+                    <li key={j} className="flex items-start gap-2 text-slate-300">
+                      <span className="text-blue-400 mt-1">→</span>
                       <span>{point}</span>
                     </li>
                   ))}
@@ -146,25 +148,27 @@ export default function Conclusion() {
       </section>
 
       {/* Executive Summary */}
-      <section className="section-container py-20 bg-gradient-to-r from-indigo-500/10 to-violet-500/10 -mx-4 px-4 md:px-8 lg:px-0">
+      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/30">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 40, filter: 'blur(10px)' }}
+          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
           transition={{ duration: 0.8 }}
+          viewport={{ once: true, margin: '-100px' }}
+          className="max-w-5xl mx-auto"
         >
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-4xl font-bold mb-8 text-slate-900 dark:text-white flex items-center gap-3">
+          <div>
+            <h2 className="text-4xl font-bold mb-8 text-center text-white flex items-center justify-center gap-3">
               <Lightbulb className="text-yellow-500" size={32} />
               Executive Summary
             </h2>
-            <div className="prose prose-invert max-w-none">
-              <p className="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+            <div className="prose prose-invert max-w-none text-center">
+              <p className="text-lg text-slate-300 mb-6 leading-relaxed">
                 This comprehensive analysis reveals a fundamental shift in the global technology industry. While the United States continues to dominate in terms of total market capitalization and number of leading companies, India has emerged as the fastest-growing tech ecosystem with a 35% CAGR in startup funding.
               </p>
-              <p className="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+              <p className="text-lg text-slate-300 mb-6 leading-relaxed">
                 Our machine learning models (R² = 0.92) demonstrate the strong correlation between digital infrastructure (ICT scores) and investment flows. Cities with superior connectivity, governance, and digital services attract significantly more funding and talent.
               </p>
-              <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+              <p className="text-lg text-slate-300 leading-relaxed">
                 The data strongly suggests that India's tech industry will continue its upward trajectory, particularly if investments in ICT infrastructure expand to tier-2 cities. This presents unprecedented opportunities for entrepreneurs, investors, and policymakers.
               </p>
             </div>
@@ -173,26 +177,30 @@ export default function Conclusion() {
       </section>
 
       {/* Recommendations */}
-      <section className="section-container py-20">
+      <section className="w-full py-20 px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 40, filter: 'blur(10px)' }}
+          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
           transition={{ duration: 0.8 }}
+          viewport={{ once: true, margin: '-100px' }}
+          className="max-w-5xl mx-auto"
         >
-          <h2 className="text-4xl font-bold mb-12 text-center text-slate-900 dark:text-white">
+          <h2 className="text-4xl font-bold mb-12 text-center text-white">
             Strategic Recommendations
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {recommendations.map((rec, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, scale: 0.8, filter: 'blur(10px)' }}
+                whileInView={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
+                viewport={{ once: true, margin: '-100px' }}
+                className="card-hover-swish"
               >
                 <GlassCard>
-                  <Target className="text-indigo-600 dark:text-indigo-400 mb-4" size={28} />
-                  <h3 className="text-xl font-bold mb-4 text-slate-900 dark:text-white">
+                  <Target className="text-blue-400 mb-4" size={28} />
+                  <h3 className="text-xl font-bold mb-4 text-white">
                     {rec.title}
                   </h3>
                   <ul className="space-y-3">
