@@ -123,7 +123,7 @@ export default function Contact() {
               <p className="text-slate-300 mb-3">
                 This comprehensive project analyzes the global technology industry with a special focus on India's emerging role. It combines three major datasets with 8+ interactive visualizations created using Plotly.
               </p>
-              <p className="text-sm text-slate-500 dark:text-slate-400">
+              <p className="text-sm text-slate-400">
                 Technologies: Python, Pandas, Scikit-learn, Plotly, Jupyter Notebooks
               </p>
             </GlassCard>
@@ -135,7 +135,7 @@ export default function Contact() {
               <p className="text-slate-300 mb-3">
                 Linear Regression model with R² = 0.92 predicts Indian startup funding trends with high accuracy. The model captures temporal patterns and seasonal variations in investment flows.
               </p>
-              <p className="text-sm text-slate-500 dark:text-slate-400">
+              <p className="text-sm text-slate-400">
                 Model Performance: MAE = ₹2.1L, RMSE = ₹3.5L, Accuracy = 85%
               </p>
             </GlassCard>
@@ -147,7 +147,7 @@ export default function Contact() {
               <p className="text-slate-300 mb-3">
                 This website presents all findings in a modern, animated, and interactive format. Built with Next.js 14, Tailwind CSS, and Framer Motion for a premium user experience.
               </p>
-              <p className="text-sm text-slate-500 dark:text-slate-400">
+              <p className="text-sm text-slate-400">
                 Technologies: Next.js, React, TypeScript, Tailwind CSS, Framer Motion
               </p>
             </GlassCard>
