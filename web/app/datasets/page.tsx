@@ -174,13 +174,15 @@ export default function Datasets() {
       </section>
 
       {/* Data Pipeline */}
-      <section className="section-container py-20 bg-slate-50 dark:bg-slate-900/50 -mx-4 px-4 md:px-8 lg:px-0">
+      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/30">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 40, filter: 'blur(10px)' }}
+          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
           transition={{ duration: 0.8 }}
+          viewport={{ once: true, margin: '-100px' }}
+          className="max-w-5xl mx-auto"
         >
-          <h2 className="text-4xl font-bold mb-12 text-center text-slate-900 dark:text-white">
+          <h2 className="text-4xl font-bold mb-12 text-center text-white">
             Data Processing Pipeline
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -201,10 +203,10 @@ export default function Datasets() {
                     <div className="text-4xl font-bold gradient-text mb-2">
                       {item.step}
                     </div>
-                    <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-1">
+                    <h3 className="text-lg font-semibold text-white mb-1">
                       {item.title}
                     </h3>
-                    <p className="text-sm text-slate-600 dark:text-slate-400">
+                    <p className="text-sm text-slate-300">
                       {item.desc}
                     </p>
                   </div>

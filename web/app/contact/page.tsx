@@ -104,22 +104,23 @@ export default function Contact() {
       </section>
 
       {/* Additional Info */}
-      <section className="section-container py-20 bg-slate-50 dark:bg-slate-900/50 -mx-4 px-4 md:px-8 lg:px-0">
+      <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/30">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 40, filter: 'blur(10px)' }}
+          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
           transition={{ duration: 0.8 }}
-          className="max-w-3xl mx-auto"
+          viewport={{ once: true, margin: '-100px' }}
+          className="max-w-5xl mx-auto"
         >
-          <h2 className="text-4xl font-bold mb-8 text-center text-slate-900 dark:text-white">
+          <h2 className="text-4xl font-bold mb-8 text-center text-white">
             About This Project
           </h2>
           <div className="space-y-8">
             <GlassCard>
-              <h3 className="text-xl font-bold mb-3 text-slate-900 dark:text-white">
+              <h3 className="text-xl font-bold mb-3 text-white">
                 📊 Data Analysis & Visualization
               </h3>
-              <p className="text-slate-600 dark:text-slate-300 mb-3">
+              <p className="text-slate-300 mb-3">
                 This comprehensive project analyzes the global technology industry with a special focus on India's emerging role. It combines three major datasets with 8+ interactive visualizations created using Plotly.
               </p>
               <p className="text-sm text-slate-500 dark:text-slate-400">
@@ -128,10 +129,10 @@ export default function Contact() {
             </GlassCard>
 
             <GlassCard>
-              <h3 className="text-xl font-bold mb-3 text-slate-900 dark:text-white">
+              <h3 className="text-xl font-bold mb-3 text-white">
                 🤖 Machine Learning Model
               </h3>
-              <p className="text-slate-600 dark:text-slate-300 mb-3">
+              <p className="text-slate-300 mb-3">
                 Linear Regression model with R² = 0.92 predicts Indian startup funding trends with high accuracy. The model captures temporal patterns and seasonal variations in investment flows.
               </p>
               <p className="text-sm text-slate-500 dark:text-slate-400">
@@ -140,10 +141,10 @@ export default function Contact() {
             </GlassCard>
 
             <GlassCard>
-              <h3 className="text-xl font-bold mb-3 text-slate-900 dark:text-white">
+              <h3 className="text-xl font-bold mb-3 text-white">
                 🌐 Interactive Web Platform
               </h3>
-              <p className="text-slate-600 dark:text-slate-300 mb-3">
+              <p className="text-slate-300 mb-3">
                 This website presents all findings in a modern, animated, and interactive format. Built with Next.js 14, Tailwind CSS, and Framer Motion for a premium user experience.
               </p>
               <p className="text-sm text-slate-500 dark:text-slate-400">
