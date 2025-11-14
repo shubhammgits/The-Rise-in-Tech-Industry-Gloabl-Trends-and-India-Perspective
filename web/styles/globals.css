@@ -10,7 +10,15 @@
   }
 
   body {
-    @apply bg-gradient-to-br from-slate-900 via-slate-950 to-black text-white transition-colors duration-300 font-body;
+    @apply bg-gradient-to-br from-slate-900 via-slate-950 to-black text-white dark:text-white dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-950 dark:to-black transition-colors duration-300 font-body;
+  }
+
+  html.light body {
+    @apply bg-gradient-to-br from-slate-50 via-white to-slate-100 text-slate-900;
+  }
+
+  html:not(.dark) body {
+    @apply bg-gradient-to-br from-slate-50 via-white to-slate-100 text-slate-900;
   }
 
   h1, h2, h3, h4, h5, h6 {
