@@ -63,7 +63,21 @@ export default function Navbar() {
             {mounted && (
               <motion.button
                 whileHover={{ scale: 1.1, rotate: 20 }}
-                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                onClick={() => {
+                  const next = theme === 'dark' ? 'light' : 'dark'
+                  try {
+                    setTheme(next)
+                  } catch (e) {
+                    // fallback: directly toggle html class
+                    if (typeof document !== 'undefined') {
+                      document.documentElement.classList.toggle('dark', next === 'dark')
+                    }
+                  }
+                  // ensure DOM class updated as a fallback
+                  if (typeof document !== 'undefined') {
+                    document.documentElement.classList.toggle('dark', next === 'dark')
+                  }
+                }}
                 className="p-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-primary/50 transition-all duration-300 text-slate-300 hover:text-primary"
               >
                 {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
