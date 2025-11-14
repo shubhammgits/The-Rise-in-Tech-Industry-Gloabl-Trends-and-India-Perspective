@@ -75,20 +75,7 @@ export default function Footer() {
           </motion.div>
         </div>
 
-        {/* Divider */}
-        <div className="border-t border-white/10" />
-
-        {/* Bottom Bar */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="pt-8 text-center"
-        >
-          <p className="text-sm text-slate-500 font-space">
-            © {currentYear} Data-Driven Analysis. Building the future with insights.
-          </p>
-        </motion.div>
+        {/* Divider removed per request */}
       </div>
     </footer>
   )
