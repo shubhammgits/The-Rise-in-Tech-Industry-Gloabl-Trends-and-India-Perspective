@@ -163,7 +163,7 @@ export default function Conclusion() {
             </h2>
             <div className="prose prose-invert max-w-none text-center">
               <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-                This comprehensive analysis reveals a fundamental shift in the global technology industry. While the United States continues to dominate in terms of total market capitalization and number of leading companies, India has emerged as the fastest-growing tech ecosystem with a 35% CAGR in startup funding.
+                This comprehensive analysis reveals a fundamental shift in the global technology industry. While the United States continues to dominate in terms of total market capitalization and number of leading companies, India has emerged as the fastest growing tech ecosystem with a 35% CAGR in startup funding.
               </p>
               <p className="text-lg text-slate-300 mb-6 leading-relaxed">
                 Our machine learning models (R² = 0.92) demonstrate the strong correlation between digital infrastructure (ICT scores) and investment flows. Cities with superior connectivity, governance, and digital services attract significantly more funding and talent.
