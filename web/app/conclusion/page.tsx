@@ -169,7 +169,7 @@ export default function Conclusion() {
                 Our machine learning models (R² = 0.92) demonstrate the strong correlation between digital infrastructure (ICT scores) and investment flows. Cities with superior connectivity, governance, and digital services attract significantly more funding and talent.
               </p>
               <p className="text-lg text-slate-300 leading-relaxed">
-                The data strongly suggests that India's tech industry will continue its upward trajectory, particularly if investments in ICT infrastructure expand to tier-2 cities. This presents unprecedented opportunities for entrepreneurs, investors, and policymakers.
+                The data strongly suggests that India's tech industry will continue its upward trajectory, particularly if investments in ICT infrastructure expand to tier 2 cities. This presents unprecedented opportunities for entrepreneurs, investors, and policymakers.
               </p>
             </div>
           </div>
@@ -244,7 +244,7 @@ export default function Conclusion() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green-500 mt-1">📈</span>
-                  <span>Tier-2 cities contribute 40%+ of funding</span>
+                  <span>Tier 2 cities contribute 40%+ of funding</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green-500 mt-1">📈</span>
