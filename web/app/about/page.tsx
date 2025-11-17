@@ -143,12 +143,12 @@ export default function About() {
             </h3>
             <ul className="space-y-4 text-slate-300 font-body">
               {[
-                'Comprehensive data analysis of 1000+ global tech companies',
-                'Deep dive into Indian startup funding dynamics',
-                'Machine learning models for trend forecasting',
-                'Interactive visualizations for easy insights',
-                'Correlation analysis between infrastructure and growth',
-                'Actionable insights for stakeholders',
+                '- Comprehensive data analysis of 1000+ global tech companies',
+                '- Deep dive into Indian startup funding dynamics',
+                '- Machine learning models for trend forecasting',
+                '- Interactive visualizations for easy insights',
+                '- Correlation analysis between infrastructure and growth',
+                '- Actionable insights for stakeholders',
               ].map((item, i) => (
                 <motion.li 
                   key={i}
