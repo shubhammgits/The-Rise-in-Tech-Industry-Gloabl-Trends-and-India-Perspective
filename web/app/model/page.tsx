@@ -82,7 +82,7 @@ export default function Model() {
               <div className="space-y-4">
                 <div>
                   <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Algorithm</h3>
-                  <p className="text-slate-600 dark:text-slate-300">Linear Regression with time-series features</p>
+                  <p className="text-slate-600 dark:text-slate-300">Linear Regression with time series features</p>
                 </div>
                 <div>
                   <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Training Data</h3>
@@ -99,7 +99,7 @@ export default function Model() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Validation</h3>
-                  <p className="text-slate-600 dark:text-slate-300">Train-test split (80-20) with cross-validation</p>
+                  <p className="text-slate-600 dark:text-slate-300">Train-test split (80-20) with cross validation</p>
                 </div>
               </div>
             </GlassCard>
