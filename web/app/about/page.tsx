@@ -62,7 +62,7 @@ export default function About() {
             About This Project
           </h1>
           <p className="section-subtitle mx-auto">
-            A data-driven exploration of the technology industry's rise, with India at the forefront of this transformation. This project combines rigorous data analysis with machine learning to uncover insights about valuations, funding patterns, and ICT infrastructure development.
+            A data driven exploration of the technology industry's rise, with India at the forefront of this transformation. This project combines rigorous data analysis with machine learning to uncover insights about valuations, funding patterns, and ICT infrastructure development.
           </p>
         </motion.div>
       </section>
