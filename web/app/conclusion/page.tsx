@@ -63,7 +63,7 @@ export default function Conclusion() {
       items: [
         'India offers high growth, lower valuations than US',
         'Diversify across sectors (IT, fintech, edtech)',
-        'Focus on tier-2 cities for growth opportunities',
+        'Focus on tier 2 cities for growth opportunities',
         'Monitor ICT infrastructure when evaluating locations',
       ],
     },
