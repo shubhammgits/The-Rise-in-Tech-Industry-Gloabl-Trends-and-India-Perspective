@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://techrise.example.com',
     title: 'The Rise in Tech Industry',
-    description: 'Analyzing the rise of technology industry through data-driven insights',
+    description: 'Analyzing the rise of technology industry through data driven insights',
   },
 }
 
