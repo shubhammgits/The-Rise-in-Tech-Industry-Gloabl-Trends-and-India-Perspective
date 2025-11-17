@@ -8,7 +8,7 @@ import '@/styles/globals.css'
 
 export const metadata: Metadata = {
   title: 'The Rise in Tech Industry – Global Trends & India Perspective',
-  description: 'Analyzing global technology industry trends and India\'s role through data-driven insights, machine learning models, and interactive visualizations.',
+  description: 'Analyzing global technology industry trends and India\'s role through data driven insights, machine learning models, and interactive visualizations.',
   keywords: ['tech industry', 'data analysis', 'India', 'machine learning', 'startup funding', 'ICT'],
   authors: [{ name: 'Shubham' }],
   creator: 'Shubham',
