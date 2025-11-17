@@ -26,11 +26,11 @@ export default function GraphCard({ title, description, imagePath, insights }: G
       className="glass-card rounded-xl overflow-hidden group"
     >
       {/* Image Container */}
-      <div className="relative h-80 bg-gradient-card overflow-hidden">
+      <div className="relative w-full bg-gradient-card overflow-hidden flex items-center justify-center" style={{ aspectRatio: '16 / 9', minHeight: '300px' }}>
         <motion.img
           src={imagePath}
           alt={title}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain p-4"
           animate={{ scale: isHovered ? 1.05 : 1 }}
           transition={{ duration: 0.3 }}
         />
