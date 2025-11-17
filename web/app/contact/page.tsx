@@ -145,7 +145,7 @@ export default function Contact() {
                 🌐 Interactive Web Platform
               </h3>
               <p className="text-slate-300 mb-3">
-                This website presents all findings in a modern, animated, and interactive format. Built with Next.js 14, Tailwind CSS, and Framer Motion for a premium user experience.
+                This website presents all findings in a modern, animated, and interactive format.
               </p>
               <p className="text-sm text-slate-400">
                 Technologies: Next.js, React, TypeScript, Tailwind CSS, Framer Motion
