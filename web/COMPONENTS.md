@@ -5,14 +5,13 @@ A comprehensive guide to all reusable components in the project.
 ## 📦 Component Imports
 
 ```tsx
-// Individual imports
+
 import Navbar from '@/components/Navbar'
 import { AnimatedHero, GlassCard, MetricCard, FloatingCard } from '@/components/Cards'
 import GraphCard from '@/components/GraphCard'
 import Footer from '@/components/Footer'
 import ScrollToTop from '@/components/ScrollToTop'
 
-// Or use central export
 import { Navbar, GlassCard, MetricCard, GraphCard } from '@/components'
 ```
 
