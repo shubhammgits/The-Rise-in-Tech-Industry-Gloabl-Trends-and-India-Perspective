@@ -20,7 +20,7 @@ export default function Visuals() {
       description: 'Actual, predicted, and forecasted funding amounts for Indian startups (2015-2020)',
       imagePath: '/graphs/funding-trends.png',
       insights: [
-        'Exponential growth in funding during 2017-2019',
+        'Exponential growth in funding during 2016-2019',
         'Seasonal patterns in investment cycles',
         'ML model predictions align well with trends',
       ],
