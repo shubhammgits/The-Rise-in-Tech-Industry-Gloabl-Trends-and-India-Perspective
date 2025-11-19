@@ -188,7 +188,7 @@ export default function Datasets() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             {[
               { step: '1', title: 'Collection', desc: 'Gather data from multiple sources' },
-              { step: '2', title: 'Cleaning', desc: 'Handle missing values & outliers' },
+              { step: '2', title: 'Cleaning', desc: 'Handle missing values and outliers' },
               { step: '3', title: 'Analysis', desc: 'Exploratory data analysis & stats' },
               { step: '4', title: 'Modeling', desc: 'Build ML models & visualizations' },
             ].map((item, i) => (
