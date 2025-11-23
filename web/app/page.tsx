@@ -19,7 +19,7 @@ export default function Home() {
     },
     {
       icon: Zap,
-      title: 'Interactive Visual',
+      title: 'Interactive Visuals',
       description: 'Beautiful, responsive dashboards with 8+ visualizations',
     },
   ]
