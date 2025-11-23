@@ -9,7 +9,7 @@ export default function Home() {
   const features = [
     {
       icon: BarChart3,
-      title: 'Data Driven Analysis',
+      title: 'Data Driven Analysi',
       description: 'Comprehensive analysis of 1000+ global tech companies and Indian startup ecosystem',
     },
     {
