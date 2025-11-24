@@ -15,7 +15,7 @@ export default function Home() {
     {
       icon: TrendingUp,
       title: 'ML Forecasting',
-      description: 'Linear regression models for predicting startup funding trend',
+      description: 'Linear regression models for predicting startup funding trends',
     },
     {
       icon: Zap,
