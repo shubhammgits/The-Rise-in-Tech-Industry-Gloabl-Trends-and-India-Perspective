@@ -54,7 +54,6 @@ export default function Navbar() {
 
           {/* Right Side Actions */}
           <div className="flex items-center gap-4">
-            {/* Theme toggle removed per request */}
 
             {/* Mobile Menu Button */}
             <motion.button
