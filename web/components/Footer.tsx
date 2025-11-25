@@ -75,7 +75,6 @@ export default function Footer() {
           </motion.div>
         </div>
 
-        {/* Divider removed per request */}
       </div>
     </footer>
   )

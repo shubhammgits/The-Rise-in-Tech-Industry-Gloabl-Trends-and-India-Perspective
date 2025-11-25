@@ -24,14 +24,14 @@ export default function Navbar() {
       
       <div className="section-container relative">
         <div className="flex items-center justify-between h-20">
-          {/* Logo/Brand - REMOVED */}
+          
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             className="flex items-center gap-2"
           >
-            {/* Empty space for balance */}
+            
           </motion.div>
 
           {/* Desktop Menu */}
