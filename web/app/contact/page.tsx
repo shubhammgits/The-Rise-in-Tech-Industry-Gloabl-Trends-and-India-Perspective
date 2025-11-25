@@ -139,18 +139,6 @@ export default function Contact() {
                 Model Performance: MAE = ₹2.1L, RMSE = ₹3.5L, Accuracy = 85%
               </p>
             </GlassCard>
-
-            <GlassCard>
-              <h3 className="text-xl font-bold mb-3 text-white">
-                🌐 Interactive Web Platform
-              </h3>
-              <p className="text-slate-300 mb-3">
-                This website presents all findings in a modern, animated, and interactive format.
-              </p>
-              <p className="text-sm text-slate-400">
-                Technologies: Next.js, React, TypeScript, Tailwind CSS, Framer Motion
-              </p>
-            </GlassCard>
           </div>
         </motion.div>
       </section>
