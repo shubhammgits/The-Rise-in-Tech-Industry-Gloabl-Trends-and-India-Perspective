@@ -217,7 +217,7 @@ The project follows a systematic and structured approach to data analysis:
 This project leverages modern data science tools and technologies:
 
 ### **Programming Language**
-- ![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python) **Python 3.8+**
+- ![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python) 
 
 ### **Data Manipulation & Analysis**
 - **Pandas** - Data manipulation and analysis
