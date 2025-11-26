@@ -494,49 +494,6 @@ Feel free to:
 
 ---
 
-## 📁 Folder Structure
-
-```
-The-Rise-in-Tech-Industry-Global-Trends-and-India-Perspective/
-│
-├── data/                                    # Dataset files
-│   ├── global_tech_companies.csv           # Top 1000 global tech companies data
-│   ├── indian_startup_funding.csv          # Indian startup funding data
-│   ├── ict_subdimension.csv                # ICT scores for Indian cities
-│   └── README.md                           # Data description and sources
-│
-├── notebooks/                               # Jupyter notebooks
-│   ├── Tech_Industry_Analysis.ipynb        # Main analysis notebook
-│   ├── EDA_Global_Companies.ipynb          # Global companies EDA
-│   ├── EDA_Indian_Startups.ipynb           # Indian startups EDA
-│   └── Forecasting_Model.ipynb             # ML forecasting notebook
-│
-├── src/                                     # Source code modules
-│   ├── __init__.py
-│   ├── data_preprocessing.py               # Data cleaning functions
-│   ├── visualization.py                    # Visualization utilities
-│   ├── modeling.py                         # ML model functions
-│   └── utils.py                            # Helper functions
-│
-├── assets/                                  # Generated visualizations
-│   ├── funding_trend_forecast.png
-│   ├── top_cities_funding.png
-│   ├── funding_ict_bubble.png
-│   ├── global_vs_india.png
-│   └── ...                                 # Other visualization images
-│
-├── reports/                                 # Analysis reports
-│   ├── Final_Report.pdf                    # Comprehensive project report
-│   └── Presentation.pptx                   # Project presentation slides
-│
-├── requirements.txt                         # Python dependencies
-├── .gitignore                              # Git ignore file
-├── LICENSE                                 # Project license
-└── README.md                               # Project documentation (this file)
-```
-
----
-
 ## 🚧 Future Enhancements
 
 This project has immense potential for expansion and improvement:
