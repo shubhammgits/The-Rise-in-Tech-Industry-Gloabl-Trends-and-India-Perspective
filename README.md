@@ -251,16 +251,6 @@ This project leverages modern data science tools and technologies:
 
 ---
 
-### 🔄 Comparative Analysis
-
-![Global vs Indian Tech Market Comparison](assets/global_vs_india.png)
-*Comparative growth metrics: Global tech giants vs Indian startups*
-
-![Investment Stage Distribution](assets/investment_stages.png)
-*Distribution of funding across different investment stages*
-
----
-
 ## 💡 Key Insights
 
 ### 🌐 Global Tech Industry Insights
@@ -273,7 +263,7 @@ This project leverages modern data science tools and technologies:
 
 ---
 
-### 🇮🇳 Indian Startup Ecosystem Insights
+### Indian Startup Ecosystem Insights
 
 #### 📈 **Funding Trends**
 - **Peak funding year**: 2019 witnessed the highest funding influx with over $12 billion invested
