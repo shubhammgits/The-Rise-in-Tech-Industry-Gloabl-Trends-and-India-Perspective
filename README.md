@@ -542,8 +542,4 @@ Have questions, suggestions, or want to collaborate? Feel free to:
 
 **Made with ❤️ and ☕ by Shubham**
 
-![GitHub stars](https://img.shields.io/github/stars/shubhammgits/The-Rise-in-Tech-Industry-Gloabl-Trends-and-India-Perspective?style=social)
-![GitHub forks](https://img.shields.io/github/forks/shubhammgits/The-Rise-in-Tech-Industry-Gloabl-Trends-and-India-Perspective?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/shubhammgits/The-Rise-in-Tech-Industry-Gloabl-Trends-and-India-Perspective?style=social)
-
 </div>
