@@ -34,7 +34,7 @@ export default function Footer() {
             transition={{ duration: 0.5 }}
           >
             <h4 className="text-lg font-bold gradient-text font-display mb-6">Quick Links</h4>
-            <ul className="grid grid-cols-2 gap-3">
+            <ul className="grid grid-cols-2 gap-">
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <Link 
