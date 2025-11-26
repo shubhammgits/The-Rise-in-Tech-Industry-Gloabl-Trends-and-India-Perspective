@@ -5,6 +5,8 @@
 
 ---
 
+# Live : https://the-rise-in-tech-industry-gloabl-tr.vercel.app/
+
 ## Project Overview
 
 The global technology industry has witnessed exponential growth over the past decade, transforming economies, creating millions of jobs, and reshaping the way we live and work. This project presents a comprehensive data driven analysis of the **global tech industry trends** and provides a **deep dive into India's position** within this dynamic ecosystem.
