@@ -2,23 +2,6 @@
 
 > *Exploring the evolution of the global technology landscape and India's emerging role as a tech powerhouse through comprehensive data analysis and forecasting*
 
----
-
-## 📋 Table of Contents
-
-- [Project Overview](#-project-overview)
-- [Features](#-features)
-- [Dataset Description](#-dataset-description)
-- [Project Workflow](#-project-workflow)
-- [Technologies Used](#-technologies-used)
-- [Visualizations](#-visualizations)
-- [Key Insights](#-key-insights)
-- [Forecasting & Modeling](#-forecasting--modeling)
-- [How to Run This Project](#-how-to-run-this-project)
-- [Folder Structure](#-folder-structure)
-- [Future Enhancements](#-future-enhancements)
-- [Conclusion](#-conclusion)
-- [Author](#-author)
 
 ---
 
