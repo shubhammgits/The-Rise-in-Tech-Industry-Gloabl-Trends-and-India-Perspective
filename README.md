@@ -49,33 +49,33 @@ This project encompasses a wide range of analytical techniques and insights:
 - Top funded startups and investors
 - Funding stage analysis (Seed, Series A, B, C, etc.)
 
-### 📡 **ICT Score Correlation Analysis**
+### **ICT Score Correlation Analysis**
 - Smart City ICT infrastructure scoring
 - Correlation between ICT scores and startup funding
-- City-level digital readiness assessment
+- City level digital readiness assessment
 - Comparative analysis of infrastructure quality
 
-### 🔮 **Forecasting & Predictive Modeling**
+### **Forecasting & Predictive Modeling**
 - Machine Learning-based regression models
-- 5-year funding forecast for Indian startups
+- 5 year funding forecast for Indian startups
 - Trend prediction using historical data
 - Model evaluation with R² score and RMSE metrics
 
-### 📈 **Data Visualization Insights**
+### **Data Visualization Insights**
 - Interactive and static visualizations using Matplotlib and Plotly
 - Comparative charts (bar, line, scatter, bubble plots)
 - Geographical analysis visualizations
 - Time-series trend plots
 
-### 🔄 **Trend Comparison (Global vs India)**
+### **Trend Comparison (Global vs India)**
 - Positioning India in the global tech ecosystem
 - Growth rate comparisons
 - Investment pattern differences
-- Sector-wise contribution analysis
+- Sector wise contribution analysis
 
 ---
 
-## 📂 Dataset Description
+## Dataset Description
 
 This project utilizes three comprehensive datasets to provide a holistic view of the tech industry:
 
