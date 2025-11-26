@@ -2,6 +2,8 @@
 
 A modern, animated, and highly informative Next.js website showcasing comprehensive data analysis of the global technology industry with special focus on India's transformative role.
 
+# Live : https://the-rise-in-tech-industry-gloabl-tr.vercel.app/
+
 ## 🎯 Project Overview
 
 This website presents findings from a detailed data science project analyzing:
