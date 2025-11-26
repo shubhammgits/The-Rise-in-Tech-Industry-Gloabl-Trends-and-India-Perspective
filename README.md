@@ -7,12 +7,12 @@
 
 ## Project Overview
 
-The global technology industry has witnessed exponential growth over the past decade, transforming economies, creating millions of jobs, and reshaping the way we live and work. This project presents a comprehensive data-driven analysis of the **global tech industry trends** and provides a **deep-dive into India's position** within this dynamic ecosystem.
+The global technology industry has witnessed exponential growth over the past decade, transforming economies, creating millions of jobs, and reshaping the way we live and work. This project presents a comprehensive data driven analysis of the **global tech industry trends** and provides a **deep dive into India's position** within this dynamic ecosystem.
 
 ### Why This Analysis Matters
 
 - **Global Context**: Understanding which countries and companies dominate the tech landscape helps identify patterns in innovation, investment, and market capitalization.
-- **India's Growth Story**: India has emerged as one of the fastest-growing startup ecosystems globally, with Bangalore, Delhi, and Mumbai becoming prominent tech hubs.
+- **India's Growth Story**: India has emerged as one of the fastest growing startup ecosystems globally, with Bangalore, Delhi, and Mumbai becoming prominent tech hubs.
 - **Data-Driven Decision Making**: This analysis provides actionable insights for investors, policymakers, entrepreneurs, and researchers interested in tech industry dynamics.
 - **Smart City Integration**: By analyzing ICT (Information and Communication Technology) infrastructure scores, we uncover the correlation between digital infrastructure and startup success.
 
