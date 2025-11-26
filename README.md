@@ -16,7 +16,7 @@ The global technology industry has witnessed exponential growth over the past de
 - **Data-Driven Decision Making**: This analysis provides actionable insights for investors, policymakers, entrepreneurs, and researchers interested in tech industry dynamics.
 - **Smart City Integration**: By analyzing ICT (Information and Communication Technology) infrastructure scores, we uncover the correlation between digital infrastructure and startup success.
 
-### 🔍 Core Questions Addressed
+### Core Questions Addressed
 
 1. **How do global tech giants compare in terms of market capitalization and revenue?**
 2. **What are the funding trends in the Indian startup ecosystem over the years?**
@@ -27,25 +27,25 @@ The global technology industry has witnessed exponential growth over the past de
 
 ---
 
-## ✨ Features
+## Features
 
 This project encompasses a wide range of analytical techniques and insights:
 
-### 📊 **Exploratory Data Analysis (EDA)**
+### Exploratory Data Analysis (EDA) 
 - Comprehensive statistical summaries of all datasets
 - Data cleaning, handling missing values, and outlier detection
 - Distribution analysis of key variables (funding, market cap, ICT scores)
 
-### 🌐 **Global Industry Analysis**
+### Global Industry Analysis
 - Analysis of the top 1000 global technology companies
-- Country-wise distribution of tech companies
-- Sector-wise breakdown (Software, Hardware, Semiconductors, etc.)
+- Country wise distribution of tech companies
+- Sector wise breakdown (Software, Hardware, Semiconductors, etc.)
 - Market capitalization and revenue trends
 
-### 🇮🇳 **Indian Startup Funding Analysis**
-- Year-over-year funding trend analysis (2015-2020)
-- City-wise funding distribution
-- Sector-wise investment patterns
+### Indian Startup Funding Analysis             
+- Year over year funding trend analysis (2015-2020)
+- City wise funding distribution
+- Sector wise investment patterns
 - Top funded startups and investors
 - Funding stage analysis (Seed, Series A, B, C, etc.)
 
